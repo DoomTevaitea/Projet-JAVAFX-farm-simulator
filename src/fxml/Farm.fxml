@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="832.0" prefWidth="995.0" style="-fx-background-color: #f5f0e8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+
+    <children>
+
+        <!-- NAV -->
+        <HBox layoutX="0.0" layoutY="0.0" prefHeight="45.0" prefWidth="995.0" spacing="6.0" style="-fx-background-color: #4a7c2f; -fx-padding: 4 10 4 10;">
+
+            <Button mnemonicParsing="false" onAction="#showHome" prefHeight="36.0" prefWidth="95.0" style="-fx-background-color: #ffffff; -fx-text-fill: #2d5a1b; -fx-border-color: #2d5a1b; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-radius: 4;" text="HOME">
+                <font><Font name="Berlin Sans FB" size="14.0" /></font>
+            </Button>
+
+            <Button mnemonicParsing="false" onAction="#showShop" prefHeight="36.0" prefWidth="95.0" style="-fx-background-color: #ffffff; -fx-text-fill: #2d5a1b; -fx-border-color: #2d5a1b; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-radius: 4;" text="SHOP">
+                <font><Font name="Berlin Sans FB" size="14.0" /></font>
+            </Button>
+
+            <Button mnemonicParsing="false" onAction="#showInventory" prefHeight="36.0" prefWidth="125.0" style="-fx-background-color: #ffffff; -fx-text-fill: #2d5a1b; -fx-border-color: #2d5a1b; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-radius: 4;" text="INVENTORY">
+                <font><Font name="Berlin Sans FB" size="14.0" /></font>
+            </Button>
+
+            <Button mnemonicParsing="false" onAction="#showStatistic" prefHeight="36.0" prefWidth="125.0" style="-fx-background-color: #ffffff; -fx-text-fill: #2d5a1b; -fx-border-color: #2d5a1b; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-radius: 4;" text="STATISTIC">
+                <font><Font name="Berlin Sans FB" size="14.0" /></font>
+            </Button>
+
+            <Pane HBox.hgrow="ALWAYS" />
+
+            <Button mnemonicParsing="false" onAction="#saveGame" prefHeight="36.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-text-fill: #2d5a1b; -fx-border-color: #2d5a1b; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-radius: 4;" text="SAVE">
+                <font><Font name="Berlin Sans FB" size="14.0" /></font>
+            </Button>
+        </HBox>
+
+        <!-- INFOS -->
+        <HBox alignment="CENTER_LEFT" layoutX="0.0" layoutY="45.0" prefHeight="119.0" prefWidth="995.0" style="-fx-background-color: #e8f0d8; -fx-border-color: #aaaaaa; -fx-border-width: 0 0 1 0; -fx-padding: 10 15 10 15;">
+
+            <!-- GAUCHE : Titre -->
+            <VBox alignment="CENTER_LEFT" prefWidth="220.0" spacing="8.0">
+                <Label text="Farm Simulator"
+                       style="-fx-text-fill: #2d5a1b; -fx-font-weight: bold;">
+                    <font><Font name="Berlin Sans FB" size="22.0"/></font>
+                </Label>
+                <Label fx:id="MeteoLabel" text="Meteo : "
+                       style="-fx-text-fill: #555555;">
+                    <font><Font name="Berlin Sans FB" size="12.0"/></font>
+                </Label>
+            </VBox>
+
+            <!-- CENTRE : Solde -->
+            <HBox alignment="CENTER" spacing="12.0" HBox.hgrow="ALWAYS">
+                <Label style="-fx-text-fill: #333333;" text="Solde : ">
+                    <font><Font name="Berlin Sans FB" size="24.0" /></font>
+                </Label>
+                <Label fx:id="DollarsView" style="-fx-text-fill: #2d7a00; -fx-font-weight: bold;" text="0 $">
+                    <font><Font name="Berlin Sans FB" size="30.0" /></font>
+                </Label>
+            </HBox>
+
+            <!-- DROITE : Alerte + Reset -->
+            <VBox alignment="CENTER_LEFT" prefHeight="98.0" prefWidth="210.0" spacing="8.0">
+                <Label fx:id="AlertLabel" prefWidth="270.0" style="-fx-text-fill: #cc0000; -fx-font-style: italic;" text="" wrapText="true">
+                    <font><Font name="Berlin Sans FB" size="12.0" /></font>
+                </Label>
+            </VBox>
+
+        </HBox>
+
+        <!-- HOME -->
+        <VBox fx:id="HomePage" layoutY="164.0" prefHeight="668.0" prefWidth="995.0" style="-fx-background-color: #c8a060;" visible="true">
+            <GridPane fx:id="farmGrid" hgap="4" prefHeight="668.0" prefWidth="995.0" style="-fx-background-color: #8B6914; -fx-padding: 4;" vgap="4" />
+        </VBox>
+
+        <!-- SHOP -->
+        <VBox fx:id="ShopPage" alignment="TOP_CENTER" layoutY="164.0" prefHeight="668.0" prefWidth="995.0" visible="false" />
+
+        <!-- INVENTORY -->
+        <VBox fx:id="InventoryPage" layoutY="164.0" prefHeight="668.0" prefWidth="995.0" visible="false" />
+
+        <!-- STATISTIC -->
+        <VBox fx:id="StatisticPage" layoutY="164.0" prefHeight="668.0" prefWidth="995.0" visible="false" />
+
+    </children>
+</Pane>
