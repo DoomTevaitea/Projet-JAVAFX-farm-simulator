@@ -3,7 +3,7 @@ public class Wallet {
     protected int dollars;
 
     public Wallet() {
-        this.dollars = 500; // ✅ montant de départ
+        this.dollars = 500;
     }
 
     public int getDollars() {
@@ -15,13 +15,13 @@ public class Wallet {
     }
 
     public void addDollars(int amount) {
-        if (amount > 0) { // ✅ on vérifie que le montant est positif
+        if (amount > 0) {
             this.dollars += amount;
         }
     }
 
     public void removeDollars(int amount) {
-        if (amount > 0 && dollars >= amount) { // ✅ double vérification
+        if (amount > 0 && dollars >= amount) { 
             this.dollars -= amount;
         }
     }

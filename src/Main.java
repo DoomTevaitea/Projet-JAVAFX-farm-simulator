@@ -7,14 +7,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-
-        // Chargement du fichier FXML
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/farm.fxml"));
         Scene scene = new Scene(loader.load());
 
-        // Configuration de la fenêtre
         stage.setTitle("Farmer Simulator");
         stage.setScene(scene);
+        stage.setMinWidth(995);   // largeur minimale
+        stage.setMinHeight(832);  // hauteur minimale
+        stage.setMaximized(true); // démarre en plein écran
         stage.show();
     }
 

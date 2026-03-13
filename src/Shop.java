@@ -19,11 +19,11 @@ public class Shop {
     private void initItems() {
 
         // Graines
-        buyItems.add(new Item.Seed("Blé",            "Graine de blé, pousse vite",           5,   8, 1, 3,  2, "Blé récolté"));
-        buyItems.add(new Item.Seed("Maïs",           "Graine de maïs, rendement moyen",     10,  18, 1, 4,  3, "Maïs récolté"));
-        buyItems.add(new Item.Seed("Carotte",        "Graine de carotte, pousse vite",        8,  14, 1, 2,  2, "Carotte récoltée"));
-        buyItems.add(new Item.Seed("Tomate",         "Graine de tomate, longue pousse",      18,  40, 1, 5,  4, "Tomate récoltée"));
-        buyItems.add(new Item.Seed("Pomme de terre", "Graine de PDT, bon rendement",         12,  22, 1, 3,  3, "PDT récoltée"));
+        buyItems.add(new Item.Seed("Blé",            "Graine de blé, pousse vite",           5,   2, 1, 3,  2, "Blé récolté"));
+        buyItems.add(new Item.Seed("Maïs",           "Graine de maïs, rendement moyen",     10,  5, 1, 4,  3, "Maïs récolté"));
+        buyItems.add(new Item.Seed("Carotte",        "Graine de carotte, pousse vite",        8,  4, 1, 2,  2, "Carotte récoltée"));
+        buyItems.add(new Item.Seed("Tomate",         "Graine de tomate, longue pousse",      18,  9, 1, 5,  4, "Tomate récoltée"));
+        buyItems.add(new Item.Seed("Pomme de terre", "Graine de PDT, bon rendement",         12,  6, 1, 3,  3, "PDT récoltée"));
 
         // Animaux
         buyItems.add(new Item.Animal("Lapin",  "Produit de la fourrure. Nourrir : Carotte récoltée",  80,  30, 1,  8,  8, "Fourrure", "Carotte récoltée"));
